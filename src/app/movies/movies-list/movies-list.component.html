@@ -1,0 +1,25 @@
+<app-generic-list [list]="movies">
+
+    <ng-container content>
+
+        <div class="d-flex flex-row flex-wrap align-content-center text-center">
+            <div *ngFor="let movie of movies; let index = index" class="mb-2 me-2 px-2">
+                <a>
+                    <img [src]="movie.poster" alt="Poster"/>
+                </a>
+                <p class="mt-3">
+                    <a>{{movie.title}}</a>
+                </p>
+                <div class="btn-group mb-3">
+                    <a mat-flat-button class="btn btn-sm btn-primary me-1">
+                        Edit
+                    </a>
+                    <button mat-flat-button class="btn btn-sm btn-danger">
+                        Delete  
+                    </button>
+                </div>
+                <br />
+            </div>
+        </div>
+    </ng-container>
+</app-generic-list>

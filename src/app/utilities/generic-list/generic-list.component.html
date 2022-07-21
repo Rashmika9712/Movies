@@ -1,0 +1,8 @@
+<div class="">
+    
+    <div *ngIf="list?.length===0">There are no records to display</div>
+    <ng-container *ngIf="list && list.length>0">      
+        <ng-content select="[content]"></ng-content>
+    </ng-container>
+    
+</div>
